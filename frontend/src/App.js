@@ -20,11 +20,26 @@ function App () {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
           <h1 className="App-title">{message}</h1>
+          <h2>{signIn()}</h2>
+          <h3>{signUp()}</h3>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
+
+  )
+}
+
+function signIn(){
+  return(
+    <h1>로그인</h1>
+  )
+}
+
+function signUp(){
+  return(
+    <h1>회원가입</h1>
   )
 }
 
