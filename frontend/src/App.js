@@ -8,39 +8,34 @@ import './App.css';
 function App () {
   const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    fetch('/api/hello')
-        .then(response => response.text())
-        .then(message => {
-          setMessage(message);
-        });
-  },[])
+  // useEffect(() => {
+  //   fetch('/api/hello')
+  //       .then(response => response.text())
+  //       .then(message => {
+  //         setMessage(message);
+  //       });
+  // },[])
   return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">{message}</h1>
-          <h2>{signIn()}</h2>
-          <h3>{signUp()}</h3>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <form action="/action_page.php">
+              <div className="form-group">
+                  <label htmlFor="email">Email address:</label>
+                  <input type="email" className="form-control" placeholder="Enter email" id="email">
+              </div>
+              <div className="form-group">
+                  <label htmlFor="pwd">Password:</label>
+                  <input type="password" className="form-control" placeholder="Enter password" id="pwd">
+              </div>
+              <div className="form-group form-check">
+                  <label className="form-check-label">
+                      <input className="form-check-input" type="checkbox"> Remember me
+                  </label>
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+          </form>
       </div>
-
   )
 }
 
-function signIn(){
-  return(
-    <h1>로그인</h1>
-  )
-}
-
-function signUp(){
-  return(
-    <h1>회원가입</h1>
-  )
-}
 
 export default App;
