@@ -1,19 +1,23 @@
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import { AccountBox } from "./components/accountBox";
 
-//백엔드에서 날라온 데이터가 성공적으로 프론트에 왔습니다!
-function App () {
+const AppContainer = styled.div`
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+function App() {
   return (
-    <LogIn></LogIn>
-
-  )
-}
-
-
- 
-function LogIn(){
-  return(
-    <h1>sd</h1>
-  )
+    <AppContainer>
+      <AccountBox />
+    </AppContainer>
+  );
 }
 
 export default App;
