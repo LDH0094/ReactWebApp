@@ -9,6 +9,7 @@ import {
 } from "./common";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
+import { Form } from "react-bootstrap";
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
@@ -16,18 +17,20 @@ export function LoginForm(props) {
   return (
     <BoxContainer>
       <FormContainer>
-        <Input type="email" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
+        <form method="post" action="/api/loginsend"> 
+          <Input type="email" placeholder="이메일" name="email"/>
+          <Input type="password" placeholder="패스워드" name="password"/>
+        </form>
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <MutedLink href="#">Forget your password?</MutedLink>
+      <MutedLink href="#">패스워드를 까먹으셨나요?</MutedLink>
       <Marginer direction="vertical" margin="1.6em" />
-      <SubmitButton type="submit">Signin</SubmitButton>
+      <SubmitButton type="submit">로그인</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
-        Don't have an accoun?{" "}
+        아직 계정이 없나요?{" "}
         <BoldLink href="#" onClick={switchToSignup}>
-          Signup
+          회원가입
         </BoldLink>
       </MutedLink>
     </BoxContainer>

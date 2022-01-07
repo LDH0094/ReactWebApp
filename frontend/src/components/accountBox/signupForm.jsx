@@ -16,18 +16,18 @@ export function SignupForm(props) {
   return (
     <BoxContainer>
       <FormContainer>
-        <Input type="text" placeholder="Full Name" />
-        <Input type="email" placeholder="Email" />
-        <Input type="password" placeholder="Password" />
-        <Input type="password" placeholder="Confirm Password" />
+        <Input type="text" placeholder="이름" />
+        <Input type="email" placeholder="이메일" />
+        <Input type="password" placeholder="패스워드" />
+        <Input type="password" placeholder="패스워드 재확인" />
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <SubmitButton type="submit">Signup</SubmitButton>
+      <SubmitButton type="submit">회원가입</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
-        Already have an account?
+        이미 계정이 있나요?
         <BoldLink href="#" onClick={switchToSignin}>
-          Signin
+          로그인
         </BoldLink>
       </MutedLink>
     </BoxContainer>

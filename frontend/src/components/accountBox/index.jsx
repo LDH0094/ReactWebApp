@@ -4,10 +4,12 @@ import { LoginForm } from "./loginForm";
 import { motion } from "framer-motion";
 import { AccountContext } from "./accountContext";
 import { SignupForm } from "./signupForm";
+import Wave from '/wave.svg';
+
 
 const BoxContainer = styled.div`
-  width: 280px;
-  min-height: 550px;
+  width: 400px;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   border-radius: 19px;
@@ -34,7 +36,7 @@ const BackDrop = styled(motion.div)`
   display: flex;
   flex-direction: column;
   border-radius: 50%;
-  transform: rotate(60deg);
+  transform: rotate(0deg);
   top: -290px;
   left: -70px;
   background: rgb(241, 196, 15);
@@ -52,6 +54,7 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderText = styled.h2`
+  font-family: "HSYuji-Regular";
   font-size: 30px;
   font-weight: 600;
   line-height: 1.24;
@@ -61,9 +64,10 @@ const HeaderText = styled.h2`
 `;
 
 const SmallText = styled.h5`
-  color: #fff;
+  font-family: "HSYuji-Regular";
+  color: #581845
   font-weight: 500;
-  font-size: 11px;
+  font-size: 20px;
   z-index: 10;
   margin: 0;
   margin-top: 7px;
@@ -136,16 +140,16 @@ export function AccountBox(props) {
           />
           {active === "signin" && (
             <HeaderContainer>
-              <HeaderText>Welcome</HeaderText>
-              <HeaderText>Back</HeaderText>
-              <SmallText>Please sign-in to continue!</SmallText>
+              <HeaderText>롤링 페이퍼를</HeaderText>
+              <HeaderText>나누어요!</HeaderText>
+              <SmallText>계속 하려면 로그인을 해주세요!!</SmallText>
             </HeaderContainer>
           )}
           {active === "signup" && (
             <HeaderContainer>
-              <HeaderText>Create</HeaderText>
-              <HeaderText>Account</HeaderText>
-              <SmallText>Please sign-up to continue!</SmallText>
+              <HeaderText>계정</HeaderText>
+              <HeaderText>만들기</HeaderText>
+              <SmallText>계속 하려면 로그인을 해주세요!</SmallText>
             </HeaderContainer>
           )}
         </TopContainer>
