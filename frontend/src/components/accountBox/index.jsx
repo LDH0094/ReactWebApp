@@ -4,7 +4,6 @@ import { LoginForm } from "./loginForm";
 import { motion } from "framer-motion";
 import { AccountContext } from "./accountContext";
 import { SignupForm } from "./signupForm";
-import Wave from '/wave.svg';
 
 
 const BoxContainer = styled.div`
