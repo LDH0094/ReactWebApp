@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
 
 const AppContainer = styled.div`
-  margin-top: 50px;
   width: 100%;
   height: 100%;
   display: flex;
