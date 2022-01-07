@@ -53,6 +53,7 @@ const HeaderText = styled.h2`
   color: #f23;
   z-index: 10;
   margin: 0;
+
 `;
 export function AccountBox(props){
     return <BoxContainer>
