@@ -13,5 +13,10 @@ public class LogInController {
     @PostMapping("/api/loginsend")
     public String sendPostData(@RequestParam(value = "email") String email,@RequestParam(value = "password") String password ) {
         return "당신이 입력한 이메일은? " + email + "\n" + "당신이 입력한 비밀번호는?  " + password;
+
+        // 단순하게 --> business logic (service)
+        //map
+        //서비스를 호출
+        //gateway
     }
 }
