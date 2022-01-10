@@ -126,19 +126,19 @@ export function AccountBox(props) {
 
 //   const WaveContainer = styled.div`
 //   position: absolute;
-//   display: flex;
-//   flex-direction: column;
-//   height: 30vh;
-//   z-index: 5;
-//   margin: 0;
-//   transform: rotate(180deg);
 //   left: 0;
+//   right: 0;
+//   top: -5px;
+//   height: ${(props) => props.level + 'vh'};
+//   display: flex;
+//   z-index: -1;
+//   transform: rotate(180deg);
 // `;
 
   return (
     <AccountContext.Provider value={contextValue}>
       <BoxContainer>
-      {/* <WaveContainer> */}
+      {/* <WaveContainer level={90}> */}
         <Wave 
         className="wave"
         fill='#56C4EA'
