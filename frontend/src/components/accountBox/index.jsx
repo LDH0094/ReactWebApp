@@ -4,7 +4,8 @@ import { LoginForm } from "./loginForm";
 import { motion } from "framer-motion";
 import { AccountContext } from "./accountContext";
 import { SignupForm } from "./signupForm";
-// import Wave from './images/wave.svg';
+import Wave from "react-wavify"
+import './index.css';
 
 const BoxContainer = styled.div`
   width: 400px;
@@ -28,6 +29,7 @@ const TopContainer = styled.div`
   padding-bottom: 5em;
 `;
 
+// 회원가입, 로그인 클릭하면 내려오는 동그라미
 const BackDrop = styled(motion.div)`
   width: 160%;
   height: 550px;
@@ -35,15 +37,10 @@ const BackDrop = styled(motion.div)`
   display: flex;
   flex-direction: column;
   border-radius: 50%;
-  transform: rotate(0deg);
-  top: -290px;
+  top: -550px;
   left: -70px;
-  background: rgb(241, 196, 15);
-  background: linear-gradient(
-    58deg,
-    rgba(241, 196, 15, 1) 20%,
-    rgba(243, 172, 18, 1) 100%
-  );
+  background: rgb(86,196,234);
+  z-index: 8;
 `;
 
 const HeaderContainer = styled.div`
@@ -77,12 +74,13 @@ const InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 1.8em;
+  z-index: 7;
 `;
 
 const backdropVariants = {
   expanded: {
     width: "233%",
-    height: "1050px",
+    height: "1300px",
     borderRadius: "20%",
     transform: "rotate(60deg)",
   },
@@ -127,9 +125,34 @@ export function AccountBox(props) {
 
   const contextValue = { switchToSignup, switchToSignin };
 
+//   const WaveContainer = styled.div`
+//   position: absolute;
+//   display: flex;
+//   flex-direction: column;
+//   height: 30vh;
+//   z-index: 5;
+//   margin: 0;
+//   transform: rotate(180deg);
+//   left: 0;
+// `;
+
   return (
     <AccountContext.Provider value={contextValue}>
       <BoxContainer>
+      {/* <WaveContainer> */}
+        <Wave 
+        className="wave"
+        fill='#56C4EA'
+        paused={false}
+        option={{
+          height: 20,
+          amplitude: 45,
+          speed: 0.1,
+          points: 5
+        }}
+        
+        />
+        {/* </WaveContainer> */}
         <TopContainer>
           <BackDrop
             initial={false}

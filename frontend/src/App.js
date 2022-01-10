@@ -1,7 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
-import Wave from './images/logo.svg';
+// import Wave from './images/wave.svg';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -16,8 +16,9 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
+        {/* <img height={50} src={Wave} alt=""/> */}
+
       <AccountBox />
-      <img src={Wave}/>
     </AppContainer>
   );
 }

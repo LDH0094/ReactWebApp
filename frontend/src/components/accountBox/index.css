@@ -1,0 +1,11 @@
+.wave {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 32vh;
+    z-index: 5;
+    margin: 0;
+    transform: rotate(180deg);
+    left: 0;
+  }
+ 
