@@ -7,7 +7,7 @@ export function Envelope(){
         <div class="lid two"></div>
         <div class="envelope"></div>
         <div class="letter">
-            <p>Hello</p>
+            <p>Hello12345678910</p>
         </div>
         </div>
     );
