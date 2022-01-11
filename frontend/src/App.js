@@ -22,7 +22,6 @@ function App() {
   return (
     <>
     <AppContainer>
-      <Envelope/>
       <AccountBox />
     </AppContainer>
     </> //이거를 이렇게 묶으면 html이 정상 작동함.
