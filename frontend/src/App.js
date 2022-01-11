@@ -1,6 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
+import { Envelope } from "./components/envelope/envelope";
 // import Wave from './images/wave.svg';
 
 const AppContainer = styled.div`
@@ -104,14 +105,7 @@ function App() {
       <Envelope/>
       <Letter class="letter"/>
       </Wrapper> */}
-      <div class="wrapper">
-        <div class="lid one"></div>
-        <div class="lid two"></div>
-        <div class="envelope"></div>
-        <div class="letter">
-          <p>Hello</p>
-        </div>
-      </div>
+      <Envelope></Envelope>
       <AccountBox />
     </AppContainer>
   );
