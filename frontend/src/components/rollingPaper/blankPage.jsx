@@ -36,7 +36,7 @@ const EnvelopeContainer = styled.div`
     justify-content: center;
     padding-top: 10%;
 `;
-export function Hello(){
+export function Paper(){
     return(
         <>
         <ViewContainer>

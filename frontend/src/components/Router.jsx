@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
-import  {Hello}  from "./rollingPaper/blankPage";
+import  {Paper}  from "./rollingPaper/blankPage";
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App/>} />
-        <Route path="/rolling" element={<Hello/>} />
+        <Route path="/rolling" element={<Paper/>} />
       </Routes>
     </BrowserRouter>
   );
