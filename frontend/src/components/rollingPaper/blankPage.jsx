@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Envelope } from "../envelope/envelope";
+import "./blankPage.css";
 
 // const Background = styled.div`
 //   height: 100%;
@@ -20,10 +21,12 @@ import { Envelope } from "../envelope/envelope";
 //   left: 40%;
 // `;
 
+
+
 const ViewContainer = styled.div`
     width: 100%;
     height: 100%;
-    background: #D3C079;
+
 `;
 
 
@@ -37,8 +40,10 @@ const EnvelopeContainer = styled.div`
     padding-top: 10%;
 `;
 export function Paper(){
+    
     return(
         <>
+        <body className="b1">
         <ViewContainer>
             <EnvelopeContainer>    
                 <Envelope/>
@@ -48,8 +53,9 @@ export function Paper(){
 
                 <Envelope/>
                 <Envelope/>
-                </EnvelopeContainer>
+            </EnvelopeContainer>
         </ViewContainer>
+        </body>
         </>
     );
 }

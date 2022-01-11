@@ -125,7 +125,7 @@ export function AccountBox(props) {
   const contextValue = { switchToSignup, switchToSignin };
 
 //   const WaveContainer = styled.div`
-//   position: absolute;
+//   position: fixed;
 //   left: 0;
 //   right: 0;
 //   top: -5px;
