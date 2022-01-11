@@ -5,10 +5,7 @@ import com.hjl.rollingpaper.domain.user.UserRepository;
 import com.hjl.rollingpaper.dto.UserSaveRequestDto;
 import com.hjl.rollingpaper.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Date;

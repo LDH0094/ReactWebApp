@@ -9,8 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Service
 public class UserService {
-    private final UserRepository userRepository;
-
+    private final UserRepository userRepository; //db
 
     @Transactional
     public Long save(UserSaveRequestDto requestDto){
