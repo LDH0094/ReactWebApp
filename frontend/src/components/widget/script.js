@@ -20,7 +20,7 @@ document.querySelector("#user_input").addEventListener('keydown', (event) => {
   }
 });
 
-createStickyNote = (text) => {
+export function createStickyNote (text){
   let note = document.createElement("div");
   let details = document.createElement("div");
   let noteText = document.createElement("h1");

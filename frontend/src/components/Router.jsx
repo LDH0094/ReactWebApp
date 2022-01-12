@@ -10,7 +10,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<App/>} />
         <Route path="/rolling" element={<Paper/>} />
-      </Routes> 
+      </Routes>
     </BrowserRouter>
   );
 };

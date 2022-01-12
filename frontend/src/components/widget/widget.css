@@ -26,7 +26,6 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-
 #modal{
   position: fixed;
   z-index: 1;
@@ -35,14 +34,14 @@ button:hover{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.inner_modal{
+#inner_modal{
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.inner_modal textarea{
+#inner_modal textarea{
   width: 276px;
   height: 276px;
   padding: 25px;
@@ -53,7 +52,7 @@ button:hover{
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.9);
 }
 
-.inner_modal i{
+#inner_modal i{
   font-size: 1.4rem;
   color: gray;
   cursor: pointer;
@@ -62,7 +61,7 @@ button:hover{
   transition: 1s ease-in-out;
 }
 
-.inner_modal i:hover{
+#inner_modal i:hover{
   color: lightgray;
 }
 
@@ -71,7 +70,7 @@ button:hover{
   margin: auto;
 }
 
-.header{
+#header{
   color: white;
   padding: 0 20px;
   min-height: 70px;
