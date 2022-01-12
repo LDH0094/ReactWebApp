@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
 import  {Paper}  from "./rollingPaper/blankPage";
+import { Widget } from "./widget/widget";
+
 
 const Router = () => {
   return (
@@ -9,7 +11,8 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<App/>} />
         <Route path="/rolling" element={<Paper/>} />
-      </Routes>
+        <Route path="/rolling/1" element={<Widget/>}/>
+      </Routes> 
     </BrowserRouter>
   );
 };
