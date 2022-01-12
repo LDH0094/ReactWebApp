@@ -60,7 +60,7 @@ const HeaderText = styled.h2`
 
 const SmallText = styled.h5`
   font-family: "HSYuji-Regular";
-  color: #581845
+  color: #581845;
   font-weight: 500;
   font-size: 20px;
   z-index: 10;

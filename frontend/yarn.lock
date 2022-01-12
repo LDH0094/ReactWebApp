@@ -7313,6 +7313,11 @@
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
+"react-lorem-ipsum@^1.4.9":
+  "integrity" "sha512-maYf2KTltui/Fnxrq2ttoKnpIm9JO6j5aYeNvCjEPCKGVMJwWNFL75Nb9hgXnMQGHTHSR4KBSIUnCPD3CzSh3g=="
+  "resolved" "https://registry.npmjs.org/react-lorem-ipsum/-/react-lorem-ipsum-1.4.9.tgz"
+  "version" "1.4.9"
+
 "react-merge-refs@^1.1.0":
   "integrity" "sha512-alTKsjEL0dKH/ru1Iyn7vliS2QRcBp9zZPGoWxUOvRGWPUYgjo+V01is7p04It6KhgrzhJGnIj9GgX8W4bZoCQ=="
   "resolved" "https://registry.npmjs.org/react-merge-refs/-/react-merge-refs-1.1.0.tgz"

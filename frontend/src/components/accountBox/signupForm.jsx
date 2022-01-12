@@ -9,6 +9,8 @@ import {
 } from "./common";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
+import { motion } from "framer-motion";
+
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
@@ -22,7 +24,11 @@ export function SignupForm(props) {
         <Input type="password" placeholder="패스워드 재확인" />
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <SubmitButton type="submit">회원가입</SubmitButton>
+      <SubmitButton type="submit"
+      whileHover={{fontStyle: 'italic'}}
+      >
+        회원가입
+      </SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         이미 계정이 있나요?

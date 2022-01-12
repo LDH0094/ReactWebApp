@@ -1,10 +1,6 @@
 import "./App.css";
 import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
-import { Envelope } from "./components/envelope/envelope";
-import { Button } from "react-bootstrap";
-import { BrowserRouter, Router, Route, Routes, Link } from "react-router-dom";
-import { Hello } from "./components/rollingPaper/blankPage";
 // import Wave from './images/wave.svg';
 
 const AppContainer = styled.div`
@@ -21,9 +17,11 @@ const AppContainer = styled.div`
 function App() {
   return (
     <>
+    <body className="b1">
     <AppContainer>
       <AccountBox />
     </AppContainer>
+    </body>
     </> //이거를 이렇게 묶으면 html이 정상 작동함.
   );
 }
