@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "SELECT * from User where email = ?1 AND password = ?2", nativeQuery = true)
-    List<String> findByEmailNPwd(String email, String password);
+   String findByEmailNPwd(String email, String password);
 
 }

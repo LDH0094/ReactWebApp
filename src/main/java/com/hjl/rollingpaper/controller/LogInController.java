@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -19,20 +20,21 @@ public class LogInController {
     private final UserService userService;
 
     @PostMapping("/api/users/login")
-    public List<String> checkUserData(@RequestBody UserSaveRequestDto requestDto) {
-//        List<String> userInfo = userRepository.findByEmailNPwd(email, password); //"asdasd,asdasd,asd,asd" ["asdasd","asdasd"]
-//        try{
-//            if (userInfo.get(1).equals(email) && userInfo.get(3).equals(password)){
-//                return "이메일은: "+ email;
-//            }
-//        }
-//        catch (IndexOutOfBoundsException e){
-//            System.out.println("/LogInController/checkUserData/ 해당 이메일 패스워드 없음");
-//        }
-
-        System.out.println("called called");
+    public String checkUserData(@RequestBody UserSaveRequestDto requestDto) {
+        String userInfo = userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword()); //query 를 string으로 저장.
+        String[] temp = userInfo.split(","); //저장된 String값을 ,으로 잘라서 List로
+        List<String> userArray = Arrays.asList(temp); // "
+        try{
+            if (userArray.get(1).equals(requestDto.getEmail()) && userArray.get(3).equals(requestDto.getPassword())){
+                System.out.println("OK");
+                return "OK"; //ok리턴값을 프론트에서 받으면 유저의 이메일과 같이 페이지 이동.
+            }
+        }
+        catch (IndexOutOfBoundsException e){
+            System.out.println("/LogInController/checkUserData/ 해당 이메일 패스워드 없음");
+        }
         System.out.println(userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword()));
-        return userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword());
+        return "VETO";
     }
 
     @PostMapping("/api/users/signup")
