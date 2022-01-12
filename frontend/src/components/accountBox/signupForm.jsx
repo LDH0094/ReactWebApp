@@ -18,10 +18,12 @@ export function SignupForm(props) {
   return (
     <BoxContainer>
       <FormContainer>
+        <form method="get" action="/user/note"> 
         <Input type="text" placeholder="이름" />
         <Input type="email" placeholder="이메일" />
         <Input type="password" placeholder="패스워드" />
         <Input type="password" placeholder="패스워드 재확인" />
+        </form>
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
       <SubmitButton type="submit"

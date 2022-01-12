@@ -18,21 +18,24 @@ public class LogInController {
     private final UserRepository userRepository;
     private final UserService userService;
 
-    @PostMapping("/user/login")
-    public String checkUserData(@RequestParam(value = "email") String email, @RequestParam(value = "password") String password ) {
-        List<String> userInfo = userRepository.findByEmailNPwd(email, password); //"asdasd,asdasd,asd,asd" ["asdasd","asdasd"]
-        try{
-            if (userInfo.get(1).equals(email) && userInfo.get(3).equals(password)){
-                return "이메일은: "+ email;
-            }
-        }
-        catch (IndexOutOfBoundsException e){
-            System.out.println("/LogInController/checkUserData/ 해당 이메일 패스워드 없음");
-        }
-        return null;
+    @PostMapping("/api/users/login")
+    public List<String> checkUserData(@RequestBody UserSaveRequestDto requestDto) {
+//        List<String> userInfo = userRepository.findByEmailNPwd(email, password); //"asdasd,asdasd,asd,asd" ["asdasd","asdasd"]
+//        try{
+//            if (userInfo.get(1).equals(email) && userInfo.get(3).equals(password)){
+//                return "이메일은: "+ email;
+//            }
+//        }
+//        catch (IndexOutOfBoundsException e){
+//            System.out.println("/LogInController/checkUserData/ 해당 이메일 패스워드 없음");
+//        }
+
+        System.out.println("called called");
+        System.out.println(userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword()));
+        return userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword());
     }
 
-    @PostMapping("/user/signup")
+    @PostMapping("/api/users/signup")
     public Long save(@RequestBody UserSaveRequestDto requestDto){
         return userService.save(requestDto);
     }

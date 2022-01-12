@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class NoteController {
 
-    @GetMapping(/user/note)
+    @GetMapping("/user/note")
     public String toNote(){
-        return
+        return "index";
     }
 }
 
