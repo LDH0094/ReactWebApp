@@ -1,10 +1,8 @@
-import { Widget } from "../widget/widget";
+
 
 
 export function Paper(){
     return(
-
-        <h1>sdasdasd</h1>
-
+        <a href="../widget/index.html">asdasd</a>
     );
 }
