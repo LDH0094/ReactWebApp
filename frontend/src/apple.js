@@ -2,27 +2,44 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NoteContainer from "./components/NoteContainer/NoteContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
+import axios from "axios";
 import "./apple.css";
-
 
 
 function Apple() {
 
   const { rollingId } = useParams();
-  const [notes, setNotes] = useState(
-    JSON.parse(localStorage.getItem("notes-app")) || []
-  );
+  // const [notes, setNotes] = useState(
+  //   JSON.parse(localStorage.getItem("notes-app")) || []
+  // );
+  const [notes, setNotes] = useState([])
+  useEffect(() => {
 
+    let idBody = {
+      name: rollingId
+    }
+    axios
+    .post("/api/post", idBody)
+    .then((res) => setNotes(res.data))
+    
+  }, [])
+
+  
   const addNote = (color) => {
-    const tempNotes = [...notes];
+    // const tempNotes = [...notes];
 
-    tempNotes.push({
-      id: Date.now() + "" + Math.floor(Math.random() * 78),
+    let tempNotes = {
+      id: parseInt(Date.now() + "" + Math.floor(Math.random() * 78)),
       text: "",
       time: Date.now(),
       color,
-    });
-    setNotes(tempNotes);
+      name:rollingId
+    };
+    console.log(tempNotes)
+    axios
+    .post("/api/post/doPost", tempNotes)
+    .then((res) => console.log(res))
+    // setNotes(tempNotes);
   };
 
   const deleteNote = (id) => {
@@ -37,17 +54,24 @@ function Apple() {
 
   const updateText = (text, id) => {
     const tempNotes = [...notes];
+    console.log(id)
 
-    const index = tempNotes.findIndex((item) => item.id === id);
+    const index = tempNotes.findIndex((item) => item.id === parseInt(id));
+
     if (index < 0) return;
 
-    tempNotes[index].text = text;
-    setNotes(tempNotes);
+    let updateNotes = {
+      id: id,
+      text: text
+    };
+    axios
+    .post("/api/post/update", updateNotes)
+    .then((res) => console.log(res))
   };
 
-  useEffect(() => {
-    localStorage.setItem("notes-app", JSON.stringify(notes));
-  }, [notes]);
+  // useEffect(() => {
+  //   localStorage.setItem("notes-app", JSON.stringify(notes));
+  // }, [notes]);
 
   
   return (

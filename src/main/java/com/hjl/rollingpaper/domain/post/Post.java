@@ -34,4 +34,8 @@ public class Post {
         this.color = color;
         this.name = name;
     }
+
+    public void update(String text){
+        this.text = text;
+    }
 }
