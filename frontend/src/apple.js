@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-
+import { useParams } from "react-router-dom";
 import NoteContainer from "./components/NoteContainer/NoteContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
-
 import "./apple.css";
 
+
+
 function Apple() {
+
+  const { rollingId } = useParams();
   const [notes, setNotes] = useState(
     JSON.parse(localStorage.getItem("notes-app")) || []
   );
@@ -46,6 +49,7 @@ function Apple() {
     localStorage.setItem("notes-app", JSON.stringify(notes));
   }, [notes]);
 
+  
   return (
     <div className="layout">
       <Sidebar addNote={addNote} />
@@ -54,6 +58,7 @@ function Apple() {
         deleteNote={deleteNote}
         updateText={updateText}
       />
+      hi! {rollingId}
     </div>
   );
 }

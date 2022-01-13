@@ -27,14 +27,14 @@ public class LogInController {
         try{
             if (userArray.get(1).equals(requestDto.getEmail()) && userArray.get(3).equals(requestDto.getPassword())){
                 System.out.println("OK");
-                return "OK"; //ok리턴값을 프론트에서 받으면 유저의 이메일과 같이 페이지 이동.
+                return userArray.get(2); //ok리턴값을 프론트에서 받으면 유저의 이메일과 같이 페이지 이동. requestDto.getName은 프론트에서 보낸거라 empty임 항상.
             }
         }
         catch (IndexOutOfBoundsException e){
             System.out.println("/LogInController/checkUserData/ 해당 이메일 패스워드 없음");
         }
         System.out.println(userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword()));
-        return "VETO";
+        return null;
     }
 
     @PostMapping("/api/users/signup")
