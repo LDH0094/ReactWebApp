@@ -3,6 +3,7 @@
     display: flex;
     gap: 20px;
     padding: 40px;
+    background-image: url("./images/paper.png")
   }
   
   .custom-scroll::-webkit-scrollbar {
