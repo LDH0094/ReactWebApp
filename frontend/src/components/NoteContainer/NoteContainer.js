@@ -19,7 +19,7 @@ function NoteContainer(props) {
 
   return (
     <div className="note-container">
-      <h2>Notes</h2>
+      <h2>롤링페이퍼</h2>
       <div className="note-container_notes custom-scroll">
         {notes?.length > 0 ? (
           notes.map((item) => (
@@ -31,7 +31,7 @@ function NoteContainer(props) {
             />
           ))
         ) : (
-          <h3>No Notes present</h3>
+          <h3>현재 롤링 페이퍼가 없어요~ 왼쪽을 눌러서 글을 작성해주세요!</h3>
         )}
       </div>
     </div>

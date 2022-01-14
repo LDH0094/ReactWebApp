@@ -59,10 +59,10 @@ export function SignupForm(props) {
   return (
     <BoxContainer>
       <FormContainer onSubmit={submitHandler} id="signupForm">
-        <Input type="text" placeholder="이름(영어로만 써주세요!)" name="name" onChange={nameHandler} value={name}/>
-        <Input type="email" placeholder="이메일" name="email" onChange={emailHandler} value={email} />
-        <Input type="password" placeholder="패스워드" name="password" onChange={passwordHandler} value={password}/>
-        <Input type="password" placeholder="패스워드 재확인" />
+        <Input type="text" placeholder="발송될 친구의 이름!" name="name" onChange={nameHandler} value={name}/>
+        <Input type="email" placeholder="친구의 이메일" name="email" onChange={emailHandler} value={email} />
+        <Input type="password" placeholder="롤링페이퍼 핀번호" name="password" onChange={passwordHandler} value={password}/>
+        <Input type="password" placeholder="핀번호 재확인" />
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
       <SubmitButton type="submit" form="signupForm"

@@ -22,7 +22,7 @@ function Apple() {
     .post("/api/post", idBody)
     .then((res) => setNotes(res.data))
     
-  }, [])
+  })
 
   
   const addNote = (color) => {
@@ -43,22 +43,29 @@ function Apple() {
   };
 
   const deleteNote = (id) => {
-    const tempNotes = [...notes];
+    // const tempNotes = [...notes];
 
-    const index = tempNotes.findIndex((item) => item.id === id);
-    if (index < 0) return;
+    // const index = tempNotes.findIndex((item) => item.id === parseInt(id));
+    // if (index < 0) return;
 
-    tempNotes.splice(index, 1);
-    setNotes(tempNotes);
+    // tempNotes.splice(index, 1);
+    // setNotes(tempNotes);
+
+    let body = {
+      id: id
+    };
+    axios
+    .post("/api/post/delete", body)
+    .then((res) => console.log(res))
   };
 
   const updateText = (text, id) => {
-    const tempNotes = [...notes];
-    console.log(id)
+    // const tempNotes = [...notes];
+    // console.log(id)
 
-    const index = tempNotes.findIndex((item) => item.id === parseInt(id));
+    // const index = tempNotes.findIndex((item) => item.id === parseInt(id));
 
-    if (index < 0) return;
+    // if (index < 0) return;
 
     let updateNotes = {
       id: id,
@@ -82,7 +89,7 @@ function Apple() {
         deleteNote={deleteNote}
         updateText={updateText}
       />
-      hi! {rollingId}
+      <p>이 롤링페이퍼는 {rollingId}에게 발송될 예정입니다!</p>
     </div>
   );
 }

@@ -57,7 +57,6 @@ function Note(props) {
         onChange={(event) => updateText(event.target.value, props.note.id)}
       />
       <div className="note_footer">
-        <p>{formatDate(props.note.time)}</p>
         <img
           src={deleteIcon}
           alt="DELETE"

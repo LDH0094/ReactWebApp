@@ -26,4 +26,10 @@ public class PostService {
         post.update(text);
         return id;
     }
+    @Transactional
+    public void delete(Long id) {
+        Post menu = postRepository.findById(id)
+                .orElseThrow(()-> new IllegalArgumentException("삭제할 데이터 없다." + id));
+        postRepository.delete(menu);
+    }
 }

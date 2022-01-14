@@ -35,4 +35,8 @@ public class PostApiController {
     }
 
 
+    @PostMapping("/api/post/delete")
+    public void delete(@RequestBody PostSaveRequestDto requestDto) {
+        postService.delete(requestDto.getId());
+    }
 };

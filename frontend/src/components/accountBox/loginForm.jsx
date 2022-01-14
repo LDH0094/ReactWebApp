@@ -59,11 +59,11 @@ export function LoginForm(props) {
       <FormContainer onSubmit={submitHandler} id="loginform">
       
       <Input type="email" placeholder="이메일" value={email} onChange={emailHandler} name="email"/>
-      <Input type="password" placeholder="패스워드" value={password} onChange={passwordHandler} name="password"/>
+      <Input type="password" placeholder="핀번호" value={password} onChange={passwordHandler} name="password"/>
   
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
-      <MutedLink href="#">패스워드를 까먹으셨나요?</MutedLink>
+      <MutedLink href="#">핀번호를 까먹으셨나요?</MutedLink>
       <Marginer direction="vertical" margin="1.6em" />
       <SubmitButton type="submit" form="loginform"
       whileHover={{fontStyle: 'italic'}}
