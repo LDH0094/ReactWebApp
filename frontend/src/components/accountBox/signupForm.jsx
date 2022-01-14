@@ -11,6 +11,7 @@ import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import { useState } from "react";
 import  axios  from "axios";
+import { LoginForm } from "./loginForm";
 
 
 export function SignupForm(props) {
@@ -54,7 +55,7 @@ export function SignupForm(props) {
       .post("/api/users/signup", body)
       .then((res) => setName(res))
   };
-
+ 
 
   return (
     <BoxContainer>
@@ -66,7 +67,7 @@ export function SignupForm(props) {
       </FormContainer>
       <Marginer direction="vertical" margin={10} />
       <SubmitButton type="submit" form="signupForm"
-      whileHover={{fontStyle: 'italic'}}
+      whileHover={{fontStyle: 'italic'}} href="#" onClick={switchToSignin}
       >
         회원가입
       </SubmitButton>
