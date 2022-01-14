@@ -17,6 +17,7 @@ public class LogInController {
     private final UserRepository userRepository;
     private final UserService userService;
 
+
     @PostMapping("/api/users/login")
     public String checkUserData(@RequestBody UserSaveRequestDto requestDto) {
         String userInfo = userRepository.findByEmailNPwd(requestDto.getEmail(), requestDto.getPassword()); //query 를 string으로 저장.
