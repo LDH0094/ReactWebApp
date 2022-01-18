@@ -67,7 +67,9 @@ Paper.js에서 unique url parameter에서 {발송 받을 친구의 이름} 을 �
   };
 ```
 요약하자면, 
-노트가 추가 될때 마다, 최상단의 useEffect()가 db에서 지속적으로 post를 불러와, 유저가 포스트 생성을 클릭시 -> db에 해당 포스트의 랜덤으로 만들어진 id, 빈 text, 시간, color, name: rollingId가 실시간으로 저장되고 -> 이를 리액트가 인식해, 랜더링을 refresh없이 빠르게 화면에 뿌려줍니다.
+노트가 추가 될때 마다, 최상단의 useEffect()가 db에서 지속적으로 post를 불러와, 유저가 포스트 생성을 클릭시 &#8594;
+     db에 해당 포스트의 랜덤으로 만들어진 id, 빈 text, 시간, color, name: rollingId가 실시간으로 저장되고 &#8594; 
+          이를 리액트가 인식해, 랜더링을 refresh없이 빠르게 화면에 뿌려줍니다.
 
 
 
