@@ -11,8 +11,6 @@ import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import { useState } from "react";
 import  axios  from "axios";
-import { LoginForm } from "./loginForm";
-
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
@@ -38,7 +36,6 @@ export function SignupForm(props) {
   
   const submitHandler = (e) => {
     e.preventDefault();
-    // state에 저장한 값을 가져옵니다.
     console.log(email);
     console.log(password);
     console.log(name);

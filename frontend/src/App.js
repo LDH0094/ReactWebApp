@@ -1,7 +1,6 @@
 import "./App.css";
 import styled from "styled-components";
 import { AccountBox } from "./components/accountBox";
-// import Wave from './images/wave.svg';
 
 const AppContainer = styled.div`
   width: 100%;
@@ -22,7 +21,7 @@ function App() {
       <AccountBox />
     </AppContainer>
     </body>
-    </> //이거를 이렇게 묶으면 html이 정상 작동함.
+    </> 
   );
 }
 

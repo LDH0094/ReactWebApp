@@ -9,9 +9,7 @@ import "./paper.css";
 function Apple() {
 
   const { rollingId } = useParams();
-  // const [notes, setNotes] = useState(
-  //   JSON.parse(localStorage.getItem("notes-app")) || []
-  // );
+
   const [notes, setNotes] = useState([])
   useEffect(() => {
 
@@ -26,7 +24,6 @@ function Apple() {
 
   
   const addNote = (color) => {
-    // const tempNotes = [...notes];
 
     let tempNotes = {
       id: parseInt(Date.now() + "" + Math.floor(Math.random() * 78)),
@@ -39,17 +36,9 @@ function Apple() {
     axios
     .post("/api/post/doPost", tempNotes)
     .then((res) => console.log(res))
-    // setNotes(tempNotes);
   };
 
   const deleteNote = (id) => {
-    // const tempNotes = [...notes];
-
-    // const index = tempNotes.findIndex((item) => item.id === parseInt(id));
-    // if (index < 0) return;
-
-    // tempNotes.splice(index, 1);
-    // setNotes(tempNotes);
 
     let body = {
       id: id
@@ -60,12 +49,6 @@ function Apple() {
   };
 
   const updateText = (text, id) => {
-    // const tempNotes = [...notes];
-    // console.log(id)
-
-    // const index = tempNotes.findIndex((item) => item.id === parseInt(id));
-
-    // if (index < 0) return;
 
     let updateNotes = {
       id: id,
@@ -76,11 +59,7 @@ function Apple() {
     .then((res) => console.log(res))
   };
 
-  // useEffect(() => {
-  //   localStorage.setItem("notes-app", JSON.stringify(notes));
-  // }, [notes]);
 
-  
   return (
     <div className="layout">
       <Sidebar addNote={addNote} />
