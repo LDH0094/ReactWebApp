@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import NoteContainer from "./components/NoteContainer/NoteContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
 import axios from "axios";
-import "./apple.css";
+import "./paper.css";
 
 
 function Apple() {

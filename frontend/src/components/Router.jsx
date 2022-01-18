@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
-import Apple from "../apple"
-import { Paper } from "./rollingPaper/blankPaper";
+import Paper from "../paper"
 
 
 const Router = () => {
@@ -10,7 +9,7 @@ const Router = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App/>} />
-        <Route path="/rolling/:rollingId" element={<Apple/>} />
+        <Route path="/rolling/:rollingId" element={<Paper/>} />
       </Routes>
     </BrowserRouter>
   );
