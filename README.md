@@ -20,7 +20,7 @@ Frontend는 React로 Backend는 Spring boot로 따로 나누어서 개발을 하
 
 본 프로젝트는 롤링페이퍼의 취지에 맞게, ‘공유’ 란 키워드를 중점적으로 개발을 하였습니다. 유저는 회원가입과 로그인을 한뒤, 로그인 정보를 db에서 확인 및 return 값으로 해당 롤링 페이퍼를 전달 받을 친구의 이름을 불러옵니다. 
 
-<img src="/frontend/src/images/readme/login.png" width="50%"> <img src="/frontend/src/images/readme/create_account.png" width="50%">
+<img src="/frontend/src/images/readme/login.png" width="45%"> <img src="/frontend/src/images/readme/create_account.png" width="45%">
 
 
 롤링 페이퍼화면은 localhost:3000/rolling/{발송 받을 친구 이름}에 위치 되어 있고 해당 unique url은 url parameter로서 롤링 페이퍼 화면에 출력되게 됩니다.
