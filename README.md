@@ -24,6 +24,9 @@
 
 롤링 페이퍼화면은 localhost:3000/rolling/{발송 받을 친구 이름}에 위치 되어 있고 해당 unique url은 url parameter로서 롤링 페이퍼 화면에 출력되게 됩니다.
 
+
+
+## 프론트 엔드
 Paper.js에서 unique url parameter에서 {발송 받을 친구의 이름} 을 가져온뒤 그 이름(rolldingId)를 api 전송, db에서 해당되는 이름과 연결된 포스트 전부를 가져옵니다.
 
 하지만 초기에 롤링 페이퍼 화면은 아무런 포스트도 출력되지 못한, 즉 db에서 아무런 정보를 가져오지 못한 상태입니다.
@@ -60,10 +63,51 @@ Paper.js에서 unique url parameter에서 {발송 받을 친구의 이름} 을 �
     .then((res) => console.log(res))
   };
 ```
+요약하자면, 
+노트가 추가 될때 마다, 최상단의 useEffect()에서 db에서 지속적으로 post를 불러와, 유저가 포스트 생성을 클릭시 -> db에 해당 포스트의 랜덤으로 만들어진 id, 빈 text, 시간, color, name: rollingId가 실시간으로 저장되고 -> 이를 리액트가 인식해, 랜더링을 refresh없이 빠르게 화면에 뿌려줍니다.
 
 
 
+
+## 백엔드
+
+백엔드 설계를 할때 저희 팀은 최대한 기능들을 MVC 패턴에 맞추어 개발하려고 노력했습니다. 모든 api를 담당하는 폴더는 controller에, db와 관련된 .java는 domain에, SaveRequestDto는 dto에, 마지막으로 비지니스 로직을 담당하는 .java는 service파일에 나누어서 개발하였습니다. 
+
+
+폴더 스샷
+
+
+아래는 api를 @RequestBody를 통해 받는 모습을 확인할 수 있습니다.
 ```Java
+  @RequiredArgsConstructor
+  @RestController
+  public class PostApiController {
 
+      private final PostRepository postRepository;
+      private final PostService postService;
+
+      @PostMapping("/api/post")
+      public List<Post> getPost(@RequestBody PostSaveRequestDto requestDto){
+          List<Post> postInfo = postRepository.showPosts(requestDto.getName());
+          return postInfo;
+      }
+
+      @PostMapping("/api/post/doPost")
+      public Long save(@RequestBody PostSaveRequestDto requestDto) {
+          return postService.save(requestDto);
+      }
+
+      @PostMapping("/api/post/update")
+      public Long update(@RequestBody PostSaveRequestDto requestDto) {
+          return postService.update(requestDto.getId(), requestDto.getText());
+      }
+
+
+      @PostMapping("/api/post/delete")
+      public void delete(@RequestBody PostSaveRequestDto requestDto) {
+          postService.delete(requestDto.getId());
+      }
+  };
+```
   
     
