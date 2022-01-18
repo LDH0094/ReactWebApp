@@ -74,7 +74,7 @@ Paper.js에서 unique url parameter에서 {발송 받을 친구의 이름} 을 �
 백엔드 설계를 할때 저희 팀은 최대한 기능들을 MVC 패턴에 맞추어 개발하려고 노력했습니다. 모든 api를 담당하는 폴더는 controller에, db와 관련된 .java는 domain에, SaveRequestDto는 dto에, 마지막으로 비지니스 로직을 담당하는 .java는 service파일에 나누어서 개발하였습니다. 
 
 
-![backend](/frontend/src/images/readme/backend_path.png){ width=50% }
+![backend](/frontend/src/images/readme/backend_path.png| width=100)
 
 
 아래는 api를 @RequestBody를 통해 받는 모습을 확인할 수 있습니다.
