@@ -18,12 +18,12 @@ Frontend는 React로 Backend는 Spring boot로 따로 나누어서 개발을 하
 
 ## 프로젝트 설명
 
-본 프로젝트는 롤링페이퍼의 취지에 맞게, ‘공유’ 란 키워드를 중점적으로 개발을 하였습니다. 유저는 회원가입과 로그인을 한뒤, 로그인 정보를 db에서 확인 및 return 값으로 해당 롤링 페이퍼를 전달 받을 친구의 이름을 불러옵니다. 
+본 프로젝트는 롤링페이퍼의 취지에 맞게, ‘공유’ 란 키워드를 중점적으로 개발을 하였습니다. 유저는 회원가입과 로그인을 한뒤, 로그인 정보를 db에서 확인 및 return 값으로 해당 롤링 페이퍼를 전달 받을 친구의 이름을 불러옵니다. <br>
 
 <img src="/frontend/src/images/readme/login.png" width="45%"> <img src="/frontend/src/images/readme/create_account.png" width="45%">
 
 
-롤링 페이퍼화면은 localhost:3000/rolling/{발송 받을 친구 이름}에 위치 되어 있고 해당 unique url은 url parameter로서 롤링 페이퍼 화면에 출력되게 됩니다.
+롤링 페이퍼화면은 localhost:3000/rolling/{발송 받을 친구 이름}에 위치 되어 있고 해당 unique url은 url parameter로서 롤링 페이퍼 화면에 출력되게 됩니다. <br>
 <img src="/frontend/src/images/readme/rollingpaper1.png" width="45%"> <img src="/frontend/src/images/readme/rollingpaper2.png" width="45%">
 
 
@@ -74,7 +74,7 @@ Paper.js에서 unique url parameter에서 {발송 받을 친구의 이름} 을 �
 
 ## 백엔드
 
-백엔드 설계를 할때 저희 팀은 최대한 기능들을 MVC 패턴에 맞추어 개발하려고 노력했습니다. 모든 api를 담당하는 폴더는 controller에, db와 관련된 .java는 domain에, SaveRequestDto는 dto에, 마지막으로 비지니스 로직을 담당하는 .java는 service파일에 나누어서 개발하였습니다. 
+백엔드 설계를 할때 저희 팀은 최대한 기능들을 MVC 패턴에 맞추어 개발하려고 노력했습니다. 모든 api를 담당하는 폴더는 controller에, db와 관련된 .java는 domain에, SaveRequestDto는 dto에, 마지막으로 비지니스 로직을 담당하는 .java는 service파일에 나누어서 개발하였습니다. <br>
 
 
 <img src="/frontend/src/images/readme/backend_path.png" width="30%">
