@@ -22,6 +22,30 @@
 로그인 스샷1, 회원가입 스샷1
 
 
+롤링 페이퍼화면은 localhost:3000/rolling/{발송 받을 친구 이름}에 위치 되어 있고 해당 unique url은 url parameter로서 롤링 페이퍼 화면에 출력되게 됩니다.
+
+초기에 롤링 페이퍼 화면은 아무런 포스트도 출력되지 못한, 즉 db에서 아무런 정보를 가져오지 못한 상태입니다.
+
+저희 팀은 리액트의 강점인 WebApp의 특성을 살려, 포스트를 생성 할때마다 프로그램에서 이를 인식한뒤 포스트가 출력되는 부분에 해당하여 재 랜더링을 해 브라우저 전체가 refresh되는 것을 방지하였습니다. 
+
+```React
+  const { rollingId } = useParams();
+  // const [notes, setNotes] = useState(
+  //   JSON.parse(localStorage.getItem("notes-app")) || []
+  // );
+  const [notes, setNotes] = useState([])
+  useEffect(() => {
+
+    let idBody = {
+      name: rollingId
+    }
+    axios
+    .post("/api/post", idBody)
+    .then((res) => setNotes(res.data))
+    
+  })
+  
+
 
 
 
