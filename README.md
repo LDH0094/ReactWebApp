@@ -11,7 +11,7 @@ Frontend는 React로 Backend는 Spring boot로 따로 나누어서 개발을 하
 
 - 제작 기간은 약 8일 정도 소요됐으며, 구성원은 다음과 같습니다.  
 
-  이 효진 <a href = "https://github.com/Hun-Se"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/> (리더, 기획 및 프론트 & 백엔드 제작)
+  <a href = "https://github.com/amyhyolee"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/> 이 효진 (리더, 기획 및 프론트 & 백엔드 제작)
   
   이 덕현 (팀원, 프로그램 구조및 설계)
 
