@@ -24,6 +24,8 @@ Frontend는 React로 Backend는 Spring boot로 따로 나누어서 개발을 하
 
 
 롤링 페이퍼화면은 localhost:3000/rolling/{발송 받을 친구 이름}에 위치 되어 있고 해당 unique url은 url parameter로서 롤링 페이퍼 화면에 출력되게 됩니다.
+<img src="/frontend/src/images/readme/rollingpaper1.png" width="45%"> <img src="/frontend/src/images/readme/rollingpaper2.png" width="45%">
+
 
 
 
