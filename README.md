@@ -13,7 +13,7 @@ Frontend는 React로 Backend는 Spring boot로 따로 나누어서 개발을 하
 
   <a href = "https://github.com/amyhyolee"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/> 이 효진 (리더, 기획 및 프론트 & 백엔드 제작)
   
-  이 덕현 (팀원, 프로그램 구조및 설계)
+   <a href = "https://github.com/LDH0094"><img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/> 이 덕현 (팀원, 프로그램 구조및 설계)
 
 
 ## 프로젝트 설명
