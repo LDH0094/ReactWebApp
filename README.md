@@ -90,7 +90,7 @@ Paper.js에서 unique url parameter에서 {발송 받을 친구의 이름} 을 �
       private final PostRepository postRepository;
       private final PostService postService;
 
-      @GostMapping("/api/post")
+      @GetMapping("/api/post")
       public List<Post> getPost(@RequestBody PostSaveRequestDto requestDto){
           List<Post> postInfo = postRepository.showPosts(requestDto.getName());
           return postInfo;
